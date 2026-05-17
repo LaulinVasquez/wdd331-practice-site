@@ -1,0 +1,72 @@
+/* Utility classes: single-purpose helpers.
+   These live in the last layer so they override components
+   by layer order without needing !important. */
+
+/* TODO: Add any utility classes you find useful */
+
+@layer utilities {
+
+    .flow > * + * {
+        margin-top: var(--space-medium);
+    }
+
+    .cluster {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        gap: var(--space-small);
+    }
+
+    .center-content {
+        display: grid;
+        place-items: center;
+    }
+
+
+    .padding-small {
+        padding: var(--space-small);
+    }
+
+    .padding-medium {
+        padding: var(--space-medium);
+    }
+
+    .padding-large {
+        padding: var(--space-large);
+    }
+
+    /* Text utilities */
+    .text-center {
+        text-align: center;
+    }
+
+    .text-muted {
+        color: var(--color-muted);
+    }
+
+    .surface {
+        background-color: var(--color-surface);
+        border-radius: var(--radius-base);
+        box-shadow: var(--shadow-soft);
+    }
+
+    
+    .visually-hidden {
+        position: absolute;
+
+        width: 1px;
+        height: 1px;
+
+        padding: 0;
+        margin: -1px;
+
+        overflow: hidden;
+
+        clip: rect(0 0 0 0);
+
+        white-space: nowrap;
+
+        border: 0;
+    }
+}

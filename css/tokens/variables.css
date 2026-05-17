@@ -1,0 +1,17 @@
+:root {
+  /* Typography */
+  /* Spaces */
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  /* Typography */
+  --font-body: system-ui, -apple-system, sans-serif;
+  /* Text size */
+  --text-small: 0.875rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.75rem;
+  /* Borders */
+  --border-radius: 5px;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+}

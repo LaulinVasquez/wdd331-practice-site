@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Selectors | @Scope Sandbox</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <h1>@Scope Sandbox</h1>
+      <p>Learning component isolation with modern CSS</p>
+    </header>
+    <main class="layout">
+      <!-- Profile -->
+      <article class="profile-card">
+            <h2>Laurin Vasquez</h2>
+            <p>This paragraph is scoped to the profile card!</p>
+        <div class="mini-widget">
+          <p>
+            This Paragraph escaped the larger text styles because of the scope
+            boundary! (Check the css)
+          </p>
+        </div>
+        <button>Follow</button>
+      </article>
+
+      <!-- Product Card -->
+      <article class="product-card">
+        <h2>Mechanical Keyboard</h2>
+        <p>Product Card styles are completely isolated</p>
+        <button>Buy NOW</button>
+      </article>
+    </main>
+  </body>
+</html>

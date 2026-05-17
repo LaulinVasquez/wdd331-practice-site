@@ -1,0 +1,39 @@
+:root{
+    #bio-card {
+    background-color: var(--color-primary);
+    padding: var(--space-md);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    max-width: 600px;
+    margin: 0 auto;
+
+    #family {
+        width: 100%;
+        height: auto;
+        border-radius: var(--border-radius);
+        margin-top: var(--space-md);
+    }
+    p{
+        color: var(--color-surface-alt);
+    }
+        /* pictures */
+    .container {
+        margin-top: var(--space-lg);
+        p{
+            font-size: var(--text-small);
+            color: var(--color-text);
+            margin-top: var(--space-md);
+            margin-bottom: var(--space-md);
+        }
+    }
+
+a {
+    color: var(--color-primary);
+}
+
+a:hover {
+    color: var(--color-primary-hover);
+
+}
+}
+}

@@ -1,0 +1,27 @@
+{
+  "name": "wdd331-practice-site",
+  "version": "1.0.0",
+  "description": "**Student:** Laurin Vasquez **Semester:** Spring 2026 **Live Site:** [View Site](https://laulinvasquez.github.io/wdd331-practice-site/) ## About This repository is my Practice Site for WDD 331R: Advanced CSS. Each week I add new pages and styles as I work through the course assignments. The site deploys automatically to GitHub Pages on every push to main. ## Pages - [Home](index.html) - [Custom Properties and Nesting](unit-1/custom-properties/index.html) - [Layared and components](unit-2/layered-components/index.html) - [Postcss practice](unit-2/postcss-demo/index.html)",
+  "main": "index.js",
+  "scripts": {
+    "build": "postcss css/main.css --output dist/styles.css",
+    "watch": "postcss css/main.css --output dist/styles.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LaulinVasquez/wdd331-practice-site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LaulinVasquez/wdd331-practice-site/issues"
+  },
+  "homepage": "https://github.com/LaulinVasquez/wdd331-practice-site#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.5.0",
+    "cssnano": "^7.1.9",
+    "postcss-cli": "^11.0.1",
+    "postcss-import": "^16.1.1"
+  }
+}

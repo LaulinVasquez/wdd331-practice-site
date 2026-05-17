@@ -1,0 +1,93 @@
+/* Card components: .card-group, .cards grid, .card, .card-tag, .card-footer
+   Use native nesting. Reference tokens with var(). */
+
+/* TODO: Style the card components */
+
+@layer components {
+
+    .cards {
+        display: grid;
+
+        grid-template-columns:
+            repeat(
+                auto-fit,
+                minmax(18rem, 1fr)
+            );
+
+        gap: clamp(
+            var(--space-medium),
+            3vw,
+            var(--space-large)
+        );
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-medium);
+
+        background-color: var(--color-surface);
+        border-radius: var(--radius-base);
+
+        padding: clamp(
+            var(--space-medium),
+            2vw,
+            calc(var(--space-large) * 1.2)
+        );
+
+        box-shadow: var(--shadow-soft);
+        border: 1px solid var(--color-border);
+
+        transition:
+            transform var(--transition-base),
+            box-shadow var(--transition-base);
+
+        &:hover {
+            transform: translateY(-4px);
+            box-shadow:
+                0 12px 24px rgba(0, 0, 0, 0.12);
+        }
+    }
+
+    .card-tag {
+        width: fit-content;
+
+        padding:
+            calc(var(--space-small) * 0.5)
+            var(--space-small);
+
+        border-radius: calc(var(--radius-base) / 2);
+
+        background-color: var(--color-primary);
+        color: var(--color-surface);
+
+        font-size: 0.875rem;
+        font-weight: 600;
+    }
+
+    .card-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        margin-top: auto;
+        padding-top: var(--space-small);
+
+        border-top: 1px solid var(--color-border);
+    }
+
+    /* Grouped text styles */
+    :is(.card p, .card span) {
+        color: var(--color-muted);
+    }
+
+    .card a {
+        font-weight: 600;
+
+        &:focus-visible {
+            outline: 3px solid var(--color-accent);
+            outline-offset: 3px;
+            border-radius: calc(var(--radius-base) / 3);
+        }
+    }
+}

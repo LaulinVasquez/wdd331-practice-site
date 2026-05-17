@@ -1,0 +1,37 @@
+:root {
+  body {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    line-height: 1.6;
+    padding: var(--space-lg);
+    padding: clamp(var(--space-md), 5vw, var(--space-lg));
+    a {
+      color: var(--color-primary);
+      text-decoration: none;
+
+      &:hover {
+        color: var(--color-primary-hover);
+      }
+    }
+    h1 {
+      font-size: clamp(2.4rem, 6vw, 3.6rem);
+      color: var(--color-primary);
+      padding: var(--space-md);
+      text-align: center;
+    }
+    h3 {
+      font-size: var(--text-lg);
+      color: var(--color-primary);
+      padding: var(--space-md);
+      margin-bottom: var(--space-lg);
+    }
+  }
+
+  footer{
+    text-align: center;
+    padding: var(--space-md);
+    background-color: var(--color-primary);
+    color: var(--color-text);
+}
+}

@@ -1,0 +1,83 @@
+/* Temple list component: .temples, .temple-name, .temple-status
+   Style the status badges differently based on class (.open, .construction). */
+
+/* TODO: Style the temple list */
+
+@layer components {
+
+    .temple-list {
+        margin-top: var(--space-large);
+    }
+
+    .temples {
+        display: grid;
+
+        gap: clamp(
+            var(--space-small),
+            2vw,
+            var(--space-medium)
+        );
+
+        margin: 0;
+        padding: 0;
+
+        list-style: none;
+    }
+
+    .temples li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        gap: var(--space-small);
+
+        padding:
+            var(--space-medium)
+            var(--space-large);
+
+        background-color: var(--color-surface);
+
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-base);
+
+        box-shadow: var(--shadow-soft);
+
+        transition:
+            transform var(--transition-base),
+            border-color var(--transition-base);
+
+        &:hover {
+            transform: translateY(-2px);
+            border-color: var(--color-primary);
+        }
+    }
+
+    .temple-name {
+        font-weight: 600;
+    }
+
+    .temple-status {
+        padding:
+            calc(var(--space-small) * 0.5)
+            var(--space-small);
+
+        border-radius: 999px;
+
+        font-size: 0.875rem;
+        font-weight: 700;
+    }
+
+    /* Shared status styling */
+    :is(.temple-status.open, .temple-status.construction) {
+        color: var(--color-surface);
+    }
+
+    .temple-status.open {
+        background-color: #15803d;
+    }
+
+    .temple-status.construction {
+        background-color: var(--color-accent);
+    }
+}

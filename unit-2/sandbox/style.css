@@ -1,0 +1,138 @@
+/* Add layers here */
+@layer settings, global;
+
+/* RESET settings */
+@layer settings {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* global */
+
+@layer global {
+  body {
+    font-family:
+      "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    background-color: #0f172a;
+    color: white;
+    min-height: 100vh;
+
+    padding: 2rem;
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1rem;
+  }
+  .layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  button {
+    border: none;
+    padding: 0.8rem 1rem;
+    border-radius: 0.7rem;
+    cursor: pointer;
+
+    transition: 0.3s;
+  }
+  p {
+    line-height: 1.6;
+  }
+}
+
+/* USING SCOPE FOR CARDS */
+
+/* Profile Card */
+
+@scope (.profile-card) {
+  :scope {
+    background-color: #1e293b;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 2px solid #38bdf8;
+    display: grid;
+    gap: 1rem;
+  }
+  h2 {
+    color: #38bdf8;
+  }
+  p {
+    color: #cbd5e1;
+  }
+  button {
+    background-color: #38bdf8;
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  button:hover {
+    transform: scale(1.02);
+    background-color: rgb(58, 56, 56);
+    color: #38bdf8;
+  }
+}
+
+/* PRODUCT CARD */
+
+@scope (.product-card) {
+  :scope {
+    background: #18181b;
+
+    padding: 1.5rem;
+
+    border-radius: 1rem;
+
+    border: 2px solid #f97316;
+
+    display: grid;
+    gap: 1rem;
+  }
+
+  h2 {
+    color: #f97316;
+  }
+
+  p {
+    color: #d4d4d8;
+  }
+
+  button {
+    background: #f97316;
+    color: white;
+  }
+
+  button:hover {
+    rotate: -2deg;
+  }
+}
+
+@scope (.profile-card) to (.mini-widget) {
+  p {
+    font-size: 1.1rem;
+  }
+
+  .mini-widget {
+    background: rgba(255, 255, 255, 0.08);
+
+    padding: 1rem;
+
+    border-radius: 0.5rem;
+  }
+}
+
+
+
+/* proximity */
+
+@scope (.theme-light) {
+    p { color: #1e293b; }
+}
+@scope (.theme-dark) {
+    p { color: #f1f5f9; }
+}

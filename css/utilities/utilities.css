@@ -1,0 +1,39 @@
+@layer utilities {
+  @scope (.carousel) {
+    :scope {
+      position: relative;
+      margin-top: var(--space-md);
+    }
+    .carousel-track {
+      position: relative;
+    }
+    .slide {
+      width: 100%;
+      border-radius: var(--border-radius);
+      display: none;
+    }
+    .slide.active {
+      display: block;
+    }
+    .prev,
+    .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: var(--space-sm);
+      cursor: pointer;
+      border-radius: var(--border-radius);
+      z-index: 1;
+    }
+
+    .prev {
+      left: 10px;
+    }
+    .next {
+      right: 10px;
+    }
+  }
+}
