@@ -3,49 +3,72 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="dist/styles.css">
+    <link rel="stylesheet" href="dist/styles.css" />
     <title>Laurin Vasquez - Practice</title>
   </head>
   <body>
-<nav>
-  <h2>Assignments</h2>
+    <nav>
+      <details class="theme-menu">
+        <summary class="theme-control">
+          <span class="visually-hidden">Color scheme</span>
+        </summary>
+        <div class="theme-extra" role="group" aria-label="Choose color scheme">
+          <label class="theme-control theme-pick" data-theme-pick="light">
+            <input name="theme-preference" type="radio" value="light" />
+            <span aria-hidden="true">&#9788;&#65039;</span>
+            <span class="visually-hidden">Light</span>
+          </label>
+          <label class="theme-control theme-pick" data-theme-pick="system">
+            <input
+              name="theme-preference"
+              type="radio"
+              value="system"
+              checked
+            />
+            <span aria-hidden="true">&#9881;&#65039;</span>
+            <span class="visually-hidden">System default</span>
+          </label>
+          <label class="theme-control theme-pick" data-theme-pick="dark">
+            <input name="theme-preference" type="radio" value="dark" />
+            <span aria-hidden="true">&#127766;</span>
+            <span class="visually-hidden">Dark</span>
+          </label>
+        </div>
+      </details>
+      <!-- <h2>Assignments</h2>
 
-  <details open>
-    <summary>Unit 1</summary>
+      <details open>
+        <summary>Unit 1</summary>
 
-    <ul>
-      <li>
-        <a href="unit-1/custom-properties/index.html">
-          Custom Properties and Nesting
-        </a>
-      </li>
-    </ul>
-  </details>
+        <ul>
+          <li>
+            <a href="unit-1/custom-properties/index.html">
+              Custom Properties and Nesting
+            </a>
+          </li>
+        </ul>
+      </details>
 
-  <details open>
-    <summary>Unit 2</summary>
+      <details open>
+        <summary>Unit 2</summary>
 
-    <ul>
-      <li>
-        <a href="unit-2/layered-components/index.html">
-          Layered and Components
-        </a>
-      </li>
+        <ul>
+          <li>
+            <a href="unit-2/layered-components/index.html">
+              Layered and Components
+            </a>
+          </li>
 
-      <li>
-        <a href="unit-2/sandbox/index.html">
-          @scope
-        </a>
-      </li>
+          <li>
+            <a href="unit-2/sandbox/index.html"> @scope </a>
+          </li>
 
-      <li>
-        <a href="unit-2/postcss-demo/index.html">
-          PostCSS
-        </a>
-      </li>
-    </ul>
-  </details>
-</nav>
+          <li>
+            <a href="unit-2/postcss-demo/index.html"> PostCSS </a>
+          </li>
+        </ul>
+      </details> -->
+    </nav>
     <h1>Welcome! to the Homepage</h1>
 
     <div class="container" id="bio-card">
