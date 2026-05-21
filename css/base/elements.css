@@ -1,37 +1,36 @@
 :root {
   body {
-    font-family: var(--font-body);
+    font-family: var(--font-family-mono);
     color: var(--color-text);
     background-color: var(--color-bg);
     line-height: 1.6;
-    padding: var(--space-lg);
-    padding: clamp(var(--space-md), 5vw, var(--space-lg));
+    padding: var(--spacing-lg);
+    padding: clamp(var(--spacing-md), 5vw, var(--spacing-lg));
     a {
-      color: var(--color-primary);
+      color: var(--color-link);
       text-decoration: none;
 
       &:hover {
-        color: var(--color-primary-hover);
+        color: var(--color-accent-hover);
       }
     }
     h1 {
       font-size: clamp(2.4rem, 6vw, 3.6rem);
-      color: var(--color-primary);
-      padding: var(--space-md);
+      color: var(--color-text);
+      padding: var(--spacing-md);
       text-align: center;
     }
     h3 {
       font-size: var(--text-lg);
-      color: var(--color-primary);
-      padding: var(--space-md);
-      margin-bottom: var(--space-lg);
+      padding: var(--spacing-md);
+      margin-bottom: var(--spacing-lg);
     }
   }
 
   footer{
     text-align: center;
-    padding: var(--space-md);
-    background-color: var(--color-primary);
-    color: var(--color-text);
+    padding: var(--spacing-md);
+    background-color: var(--accent-400);
+    color: var(--color-surface);
 }
 }

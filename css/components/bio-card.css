@@ -1,7 +1,7 @@
 :root{
     #bio-card {
-    background-color: var(--color-primary);
-    padding: var(--space-md);
+    background-color: var(--accent-400);
+    padding: var(--spacing-md);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-md);
     max-width: 600px;
@@ -11,28 +11,27 @@
         width: 100%;
         height: auto;
         border-radius: var(--border-radius);
-        margin-top: var(--space-md);
+        margin-top: var(--spacing-md);
     }
-    p{
-        color: var(--color-surface-alt);
+    p,h2{
+        color: var(--color-surface);
     }
         /* pictures */
     .container {
-        margin-top: var(--space-lg);
+        margin-top: var(--spacing-lg);
         p{
-            font-size: var(--text-small);
-            color: var(--color-text);
-            margin-top: var(--space-md);
-            margin-bottom: var(--space-md);
+            font-size: var(--text-lg);
+            margin-top: var(--spacing-lg);
+            margin-bottom: var(--spacing-md);
         }
     }
 
 a {
-    color: var(--color-primary);
+    color: var(--color-link);
 }
 
 a:hover {
-    color: var(--color-primary-hover);
+    color: var(--color-accent-hover);
 
 }
 }
