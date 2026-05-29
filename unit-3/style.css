@@ -1,0 +1,63 @@
+/* @import url('../css/base/elements.css');  */
+/* @import url('../css/tokens/color.css');  */
+/* @import url('../css/components/nav.css');  */
+
+:root {
+  --color-bg: #a958a9;
+}
+body {
+  font-family: system-ui,-apple-system,sans-serif;
+  padding: 2rem;
+  background: var(--color-bg);
+}
+
+h1 {
+  margin-bottom: 2rem;
+  color: contrast-color(var(--color-bg));
+  text-align: center;
+}
+
+.card {
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+
+  /* Automatically choose readable text color */
+  color: contrast-color(var(--color-bg));
+}
+
+.blue {
+  background-color: #0077ff;
+}
+
+.yellow {
+  background-color: #fde047;
+}
+
+.purple {
+  background-color: #9333ea;
+}
+
+.lime {
+  background-color: #84cc16;
+}
+
+.info {
+  max-width: 60ch;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+
+  background: #f8fafc;
+  color: #0f172a;
+
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid #2563eb;
+
+  border-radius: 0.75rem;
+
+  line-height: 1.6;
+  font-size: 1.5rem;
+
+  box-shadow: 4px 1px 2px rgba(0, 0, 0, 0.328);
+}
