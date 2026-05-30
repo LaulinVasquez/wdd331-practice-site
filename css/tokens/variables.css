@@ -15,8 +15,14 @@
 
   /* Borders */
   --border-radius: 5px;
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* SHADOWS */
+ /* Level 1: buttons, inputs, low cards */
+  --shadow-sm: 0 1px 2px oklch(0.2 0 0 / 0.1), 0 2px 4px oklch(0.2 0 0 / 0.06);
+  /* Level 2: raised cards, dropdowns */
+  --shadow-md: 0 2px 4px oklch(0.2 0 0 / 0.1), 0 6px 12px oklch(0.2 0 0 / 0.07), 0 16px 32px oklch(0.2 0 0 / 0.05);
+  /* Level 3: modals, popovers, dialogs */
+  --shadow-lg: 0 4px 8px oklch(20.019% 0.00002 271.152 / 0.606), 0 12px 24px oklch(0.2 0 0 / 0.08), 0 24px 48px oklch(0.2 0 0 / 0.06);
+
 
   /* Typography */
   --font-family-sans: system-ui, sans-serif;
