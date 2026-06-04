@@ -1,0 +1,99 @@
+@layer layout {
+
+  .articles-page main {
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+
+  .articles-page .card-grid {
+    display: grid;
+    gap: var(--spacing-lg);
+
+    grid-template-columns:
+      repeat(
+        auto-fit,
+        minmax(min(100%, 240px), 1fr)
+      );
+  }
+}
+
+@layer components {
+
+  .articles-page {
+    font-family: var(--font-family-sans);
+  }
+
+  .articles-page header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .articles-page header p {
+    color: var(--color-text-muted);
+  }
+
+  .articles-page .card {
+    display: flex;
+    flex-direction: column;
+
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+
+    box-shadow: var(--shadow-md);
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .articles-page .card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  /* Image Placeholder */
+
+  .articles-page .card > div:first-child {
+    height: 180px;
+    background:
+      linear-gradient(
+        135deg,
+        var(--accent-300),
+        var(--color-accent)
+      );
+  }
+
+  /* Card Body */
+
+  .articles-page .card > div:last-child {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    padding: var(--spacing-lg);
+    gap: var(--spacing-md);
+  }
+
+  .articles-page .card h2 {
+    margin: 0;
+    font-size: var(--font-size-lg);
+  }
+
+  .articles-page .card p {
+    color: var(--color-text-muted);
+  }
+
+  /* Pushes link to bottom */
+
+  .articles-page .card a {
+    margin-top: auto;
+
+    color: var(--color-link);
+    font-weight: 600;
+  }
+
+  .articles-page .card a:hover {
+    color: var(--color-link-hover);
+  }
+}
