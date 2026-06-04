@@ -42,6 +42,7 @@ body {
 }
 
 .header {
+    /* change grid-area for some other value that is inside grid-templates areas */
   grid-area: header;
   background: rgb(70, 70, 181);
   padding: 1rem;
