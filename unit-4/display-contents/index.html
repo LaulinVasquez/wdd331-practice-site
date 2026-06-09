@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>display: contents Example</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../../dist/styles.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="../../index.html">&larr; Home</a>
+      <details class="theme-menu">
+        <summary class="theme-control">
+          <span class="visually-hidden">Color scheme</span>
+        </summary>
+        <div class="theme-extra" role="group" aria-label="Choose color scheme">
+          <label class="theme-control theme-pick" data-theme-pick="light">
+            <input name="theme-preference" type="radio" value="light" />
+            <span aria-hidden="true">&#9788;&#65039;</span>
+            <span class="visually-hidden">Light</span>
+          </label>
+          <label class="theme-control theme-pick" data-theme-pick="system">
+            <input
+              name="theme-preference"
+              type="radio"
+              value="system"
+              checked
+            />
+            <span aria-hidden="true">&#9881;&#65039;</span>
+            <span class="visually-hidden">System default</span>
+          </label>
+          <label class="theme-control theme-pick" data-theme-pick="dark">
+            <input name="theme-preference" type="radio" value="dark" />
+            <span aria-hidden="true">&#127766;</span>
+            <span class="visually-hidden">Dark</span>
+          </label>
+        </div>
+      </details>
+    </nav>
+    <h1>display: contents Demo</h1>
+
+    <main>
+      <nav class="menu">
+        <ul class="links">
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+      <div class="grid">
+        <!-- <h2>Example of using contents:</h2> -->
+        <div class="wrapper">
+          <div class="card">Card 1</div>
+          <div class="card">Card 2</div>
+        </div>
+
+        <div class="card">Card 3</div>
+      </div>
+    </main>
+  </body>
+</html>

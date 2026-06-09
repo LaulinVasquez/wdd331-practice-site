@@ -1,0 +1,48 @@
+/* example of nav bar */
+.menu{
+    display: flex;
+    gap: 3rem;
+    background-origin: 2px solid black;
+    padding: 10px;
+    font-size: 1rem;
+    color: black;
+    border-radius: solid black 5px;
+}
+
+.links{
+    display:contents;
+    cursor:grab;
+}
+li{
+    padding: 10px;
+    background-color: lightgrey;
+}
+
+/* cards */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  border: 0.1px solid var(--color-text);
+  padding: 10px;
+  background: linear-gradient(135deg, #4f46e5, #06b6d4, #22c55e);
+  position: relative;
+  overflow: hidden;
+}
+
+.wrapper{
+    display:contents;
+}
+
+.card {
+  padding: 20px;
+  border: 1px solid gray;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+box-shadow: var(--shadow-lg);
+}
+
+
