@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sticky Demo</title>
+
+    <link rel="stylesheet" href="../../dist/styles.css" />
+    <link rel="stylesheet" href="sticky-demo.css" />
+  </head>
+  <body class="sticky-page">
+    <header>
+      <h1>Sticky Position Demo</h1>
+      <p>Following the reader while the page scrolls.</p>
+      <details class="theme-menu">
+        <summary class="theme-control">
+          <span class="visually-hidden">Color scheme</span>
+        </summary>
+        <div class="theme-extra" role="group" aria-label="Choose color scheme">
+          <label class="theme-control theme-pick" data-theme-pick="light">
+            <input name="theme-preference" type="radio" value="light" />
+            <span aria-hidden="true">&#9788;&#65039;</span>
+            <span class="visually-hidden">Light</span>
+          </label>
+          <label class="theme-control theme-pick" data-theme-pick="system">
+            <input
+              name="theme-preference"
+              type="radio"
+              value="system"
+              checked
+            />
+            <span aria-hidden="true">&#9881;&#65039;</span>
+            <span class="visually-hidden">System default</span>
+          </label>
+          <label class="theme-control theme-pick" data-theme-pick="dark">
+            <input name="theme-preference" type="radio" value="dark" />
+            <span aria-hidden="true">&#127766;</span>
+            <span class="visually-hidden">Dark</span>
+          </label>
+        </div>
+      </details>
+    </header>
+
+    <main class="page-layout">
+      <aside class="toc">
+        <h2>Contents</h2>
+
+        <nav>
+          <a href="../../index.html">&larr; Home</a>
+          <a href="#one">Introduction</a>
+          <a href="#two">Container Queries</a>
+          <a href="#three">Subgrid</a>
+          <a href="#four">Sticky Positioning</a>
+        </nav>
+      </aside>
+
+      <article class="content">
+        <section id="one">
+          <h2>Introduction</h2>
+
+          <p>
+            Modern CSS provides powerful tools that allow developers to create
+            flexible, responsive, and maintainable layouts without relying on
+            JavaScript or complicated workarounds.
+          </p>
+
+          <p>
+            Features such as container queries, subgrid, and sticky positioning
+            make components more reusable and improve the overall user
+            experience.
+          </p>
+
+          <p>
+            Understanding these tools helps developers build interfaces that
+            adapt naturally to different devices and content sizes.
+          </p>
+        </section>
+
+        <section id="two">
+          <h2>Container Queries</h2>
+
+          <p>
+            Container queries allow components to respond to the size of their
+            parent container rather than the size of the viewport.
+          </p>
+
+          <p>
+            This makes components far more reusable because they can behave
+            differently when placed inside a sidebar, a card, or a wide content
+            area.
+          </p>
+
+          <p>
+            By using <code>@container</code>, developers can create layouts that
+            adapt to their surroundings without media queries.
+          </p>
+        </section>
+
+        <section id="three">
+          <h2>Subgrid</h2>
+
+          <p>
+            Subgrid allows nested grid items to inherit the row or column tracks
+            of their parent grid.
+          </p>
+
+          <p>
+            This feature solves alignment problems that were previously
+            difficult to manage, especially in card layouts with varying amounts
+            of content.
+          </p>
+
+          <p>
+            With subgrid, titles, descriptions, and buttons can remain perfectly
+            aligned across an entire row of cards.
+          </p>
+        </section>
+
+        <section id="four">
+          <h2>Sticky Positioning</h2>
+
+          <p>
+            Sticky positioning combines the behavior of relative and fixed
+            positioning.
+          </p>
+
+          <p>
+            An element behaves normally until the page reaches a specified
+            offset, after which the element remains visible while scrolling.
+          </p>
+
+          <p>
+            Sticky elements are commonly used for sidebars, table of contents,
+            navigation menus, and section headers because they help readers
+            maintain context as they move through long pages.
+          </p>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>
