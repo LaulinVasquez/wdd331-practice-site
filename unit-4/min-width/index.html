@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex min-width: 0 Demo</title>
+
+    <!-- Global system styles -->
+    <link rel="stylesheet" href="../../dist/styles.css" />
+
+    <!-- Page-specific styles -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body class="flex-min-width-demo-page">
+    <header class="site-header">
+      <h1>Flex Layout Trap: min-width: auto</h1>
+      <p>Understanding why flex items refuse to shrink</p>
+
+      <nav class="site-nav">
+        <a href="../../index.html">&larr; Home</a>
+      </nav>
+    </header>
+
+    <main class="demo-layout">
+      <!-- ========================= -->
+      <!-- FLEX MIN-WIDTH DEMO -->
+      <!-- ========================= -->
+      <section class="demo-section">
+        <h2>Flex Overflow (min-width default behavior)</h2>
+        <button id="toggle">Toggle min-width: 0</button>
+        <div class="sidebar-layout">
+          <aside class="sidebar">Sidebar (fixed 240px)</aside>
+
+          <div class="content" id="content">
+            <h3>Content Area</h3>
+
+            <p>This layout breaks when content has a large intrinsic width.</p>
+
+            <div class="overflow-text">
+              this is a
+              verylong_filename_that_has_no_spaces_and_prevents_flexbox_from_shrinking_properly.txt
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================= -->
+      <!-- COLUMN FLEX DEMO -->
+      <!-- ========================= -->
+      <section class="demo-section">
+        <h2>Column Flex: min-height issue</h2>
+
+        <div class="panel">
+          <div class="panel-header">Fixed Header</div>
+
+          <div class="panel-body">
+            <p>Scrollable content area</p>
+            <div class="tall-content"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================= -->
+      <!-- BOX-SIZING DEMO -->
+      <!-- ========================= -->
+      <section class="demo-section">
+        <h2>box-sizing: content-box vs border-box</h2>
+
+        <div class="box-demo">
+          This box uses width: 100% with padding and border. Watch what happens
+          when box-sizing changes.
+        </div>
+      </section>
+    </main>
+  </body>
+  <script>
+    const btn = document.getElementById("toggle");
+    const content = document.getElementById("content");
+
+    btn.addEventListener("click", () => {
+      content.classList.toggle("min-zero");
+    });
+  </script>
+</html>
