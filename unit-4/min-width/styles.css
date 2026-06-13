@@ -1,0 +1,110 @@
+
+
+.flex-min-width-demo-page .site-header {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.flex-min-width-demo-page .site-nav {
+  margin-top: var(--spacing-sm);
+}
+
+.flex-min-width-demo-page .demo-layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+  padding: var(--spacing-lg);
+}
+
+.sidebar-layout {
+  display: flex;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.sidebar {
+  flex: 0 0 240px;
+  padding: var(--spacing-md);
+  background: var(--color-surface-2);
+}
+
+
+.content {
+  flex: 1;
+  padding: var(--spacing-md);
+  background: var(--color-surface);
+  min-width: 0;
+
+}
+
+.overflow-text {
+  font-family: monospace;
+  overflow-wrap: break-word;
+/* or */
+  word-break: break-all;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  height: 220px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.panel-header {
+  flex: 0 0 auto;
+  padding: var(--spacing-md);
+  background: var(--color-surface-2);
+}
+
+.panel-body {
+  flex: 1;
+  padding: var(--spacing-md);
+  overflow-y: auto;
+
+  /* 🔥 KEY LINE FOR TEACHING */
+  min-height: 0;
+}
+
+.tall-content {
+  height: 500px;
+  background: linear-gradient(
+    135deg,
+    var(--accent-300),
+    var(--color-accent)
+  );
+}
+
+/* =========================
+   BOX-SIZING DEMO
+   ========================= */
+
+.box-demo {
+  width: 300px;
+  padding: var(--spacing-lg);
+  border: 2px solid var(--color-border);
+  background: var(--color-surface-2);
+
+  box-sizing: content-box;
+}
+
+.content {
+  flex: 1;
+  padding: var(--spacing-md);
+  background: var(--color-surface);
+
+  min-width: auto;
+}
+
+.content.min-zero {
+  min-width: 0;
+}
+
+.overflow-text {
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
