@@ -59,7 +59,24 @@ The project uses a layered CSS architecture:
 
 Cascade layers are used to control style precedence without relying on high specificity.
 
+## 🔤 Web Font Choice
 
+This project uses a deliberate two-font strategy:
+
+- **Poppins (Google Fonts)** for headings
+- **System font stack** for body text
+
+This separation creates a clear typographic hierarchy while keeping body text fast and highly readable.
+
+### Font Loading Strategy
+
+Poppins is loaded from Google Fonts with performance optimizations:
+
+```html
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  ```
 # Build Tool
 
 This project uses:
