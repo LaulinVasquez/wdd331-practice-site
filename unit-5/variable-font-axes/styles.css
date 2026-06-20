@@ -1,0 +1,138 @@
+/* ===========================
+   Variable Font Loading
+   One file replaces many weights
+=========================== */
+
+@font-face {
+    font-family: "Recursive";
+    src: url("./fonts/recursive-variable.ttf") format("woff2-variations");
+    font-weight: 300 1000;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ===========================
+   General Layout
+=========================== */
+
+body {
+    font-family: "Recursive", sans-serif;
+    max-width: 900px;
+    margin: auto;
+    padding: 2rem;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+}
+
+section {
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+p {
+    font-size: 2rem;
+}
+
+/* ===========================
+   Registered Axis:
+   Weight (wght)
+   Controlled by font-weight
+=========================== */
+
+.weight-demo {
+    font-weight: 350;
+
+    transition: font-weight .5s ease;
+}
+
+.weight-demo:hover {
+    font-weight: 900;
+    color:green;
+}
+
+/*
+   Registered Axis:
+   Width (wdth)
+   Controlled by font-stretch */
+
+.width-demo {
+    font-stretch: 50%;
+}
+
+/* ===========================
+   Registered Axis:
+   Slant (slnt)
+   Controlled by font-style
+=========================== */
+
+.slant-demo {
+    font-style: oblique -12deg;
+}
+
+/* ===========================
+   Custom Axes
+   Must use font-variation-settings
+=========================== */
+
+.custom-demo {
+    font-variation-settings:
+        "MONO" 0,
+        "CASL" 0.3;
+
+    transition:
+        font-variation-settings .4s ease;
+}
+
+/* Hover example */
+
+.custom-demo:hover {
+    font-variation-settings:
+        "MONO" 1,
+        "CASL" 0.5;
+}
+
+.good-example {
+    font-variation-settings:
+        "MONO" 1,
+        "CASL" 0.8;
+}
+
+
+/* Animation Example */
+
+.animated-demo {
+    font-weight: 300;
+
+    animation:
+        pulse-weight
+        2s
+        ease-in-out
+        infinite
+        alternate;
+}
+
+@keyframes pulse-weight {
+    from {
+        font-weight: 300;
+    }
+
+    to {
+        font-weight: 900;
+    }
+}
+
+/* Respect Reduced Motion */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .animated-demo {
+        animation: none;
+    }
+
+}
+

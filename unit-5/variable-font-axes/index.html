@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variable Font Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../../dist/styles.css">
+  </head>
+  <body>
+    <nav>
+        <a href="../../index.html">&larr; Home</a>
+    </nav>
+    <h1>Variable Font Axes Demo</h1>
+
+    <section>
+      <h2>Weight Axis (wght)</h2>
+      <p class="weight-demo">The quick brown fox jumps over the lazy dog.</p>
+    </section>
+
+    <section>
+      <h2>Width Axis (wdth)</h2>
+      <p class="width-demo">The quick brown fox jumps over the lazy dog.</p>
+    </section>
+
+    <section>
+      <h2>Slant Axis (slnt)</h2>
+      <p class="slant-demo">The quick brown fox jumps over the lazy dog.</p>
+    </section>
+
+    <section>
+      <h2>Custom Axis (MONO)</h2>
+
+      <label>
+        MONO:
+        <input
+          type="range"
+          min="0"
+          max="1"
+          step="0.1"
+          value="0"
+          id="mono-slider"
+        />
+      </label>
+
+      <p class="custom-demo">The quick brown fox jumps over the lazy dog.</p>
+    </section>
+
+    <script>
+      const slider = document.querySelector("#mono-slider");
+      const text = document.querySelector(".custom-demo");
+
+      slider.addEventListener("input", () => {
+        text.style.fontVariationSettings = `'MONO' ${slider.value}, 'CASL' 1`;
+      });
+    </script>
+  </body>
+</html>
