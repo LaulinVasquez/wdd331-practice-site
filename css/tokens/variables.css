@@ -1,9 +1,5 @@
 :root {
   /* Source of truth! :D */
-  /* Spaces */
-  --space-sm: 0.5rem;
-  --space-md: 1rem;
-  --space-lg: 2rem;
 
   /* Typography */
   --font-body: system-ui, -apple-system, sans-serif;

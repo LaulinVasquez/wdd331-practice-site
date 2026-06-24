@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dist/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Laurin Vasquez - Practice</title>
+  </head>
+  <body>
+    <nav>
+      <details class="theme-menu">
+        <summary class="theme-control">
+          <span class="visually-hidden">Color scheme</span>
+        </summary>
+        <div class="theme-extra" role="group" aria-label="Choose color scheme">
+          <label class="theme-control theme-pick" data-theme-pick="light">
+            <input name="theme-preference" type="radio" value="light" />
+            <span aria-hidden="true">&#9788;&#65039;</span>
+            <span class="visually-hidden">Light</span>
+          </label>
+          <label class="theme-control theme-pick" data-theme-pick="system">
+            <input
+              name="theme-preference"
+              type="radio"
+              value="system"
+              checked
+            />
+            <span aria-hidden="true">&#9881;&#65039;</span>
+            <span class="visually-hidden">System default</span>
+          </label>
+          <label class="theme-control theme-pick" data-theme-pick="dark">
+            <input name="theme-preference" type="radio" value="dark" />
+            <span aria-hidden="true">&#127766;</span>
+            <span class="visually-hidden">Dark</span>
+          </label>
+        </div>
+      </details>
+      <a href="./index.html">&larr; Home</a>
+    </nav>
+    <script src="js/main.js"></script>
+  </body>
+  <main>
+    <form class="contact-form">
+      <label for="name">Name</label>
+      <input id="name" type="text" />
+
+      <label for="email">Email</label>
+      <input id="email" type="email" />
+
+      <label for="message">Message</label>
+      <textarea id="message"></textarea>
+
+      <label>
+        <input type="checkbox" />
+        Subscribe to updates
+      </label>
+
+      <button type="submit">Send</button>
+    </form>
+  </main>
+  <footer>
+    <p>&copy; 2026 Laurin Vasquez. All rights reserved.</p>
+  </footer>
+</html>
