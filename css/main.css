@@ -17,3 +17,38 @@
 
 
 
+@media print {
+
+  nav,
+  footer,
+  .theme-menu,
+  button {
+    display: none;
+  }
+
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 11pt;
+    color: black;
+    background: white;
+  }
+
+  a::after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+  }
+
+  section {
+    break-inside: avoid;
+  }
+
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .resume-header {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}
