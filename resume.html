@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -18,239 +17,203 @@
   </head>
 
   <body>
-    <nav>
-      <details class="theme-menu">
-        <summary class="theme-control">
-          <span class="visually-hidden">Color scheme</span>
-        </summary>
-
-        <div class="theme-extra" role="group" aria-label="Choose color scheme">
-          <label class="theme-control theme-pick" data-theme-pick="light">
-            <input name="theme-preference" type="radio" value="light" />
-            <span aria-hidden="true">&#9788;&#65039;</span>
-            <span class="visually-hidden">Light</span>
-          </label>
-
-          <label class="theme-control theme-pick" data-theme-pick="system">
-            <input
-              name="theme-preference"
-              type="radio"
-              value="system"
-              checked
-            />
-            <span aria-hidden="true">&#9881;&#65039;</span>
-            <span class="visually-hidden">System default</span>
-          </label>
-
-          <label class="theme-control theme-pick" data-theme-pick="dark">
-            <input name="theme-preference" type="radio" value="dark" />
-            <span aria-hidden="true">&#127766;</span>
-            <span class="visually-hidden">Dark</span>
-          </label>
-        </div>
-      </details>
-
-      <a href="./index.html">&larr; Home</a>
-    </nav>
-
+    <details class="theme-menu">
+      <summary class="theme-control">
+        <span class="visually-hidden">Color scheme</span>
+      </summary>
+      <div class="theme-extra" role="group" aria-label="Choose color scheme">
+        <label class="theme-control theme-pick" data-theme-pick="light">
+          <input name="theme-preference" type="radio" value="light" />
+          <span aria-hidden="true">&#9788;&#65039;</span>
+          <span class="visually-hidden">Light</span>
+        </label>
+        <label class="theme-control theme-pick" data-theme-pick="system">
+          <input name="theme-preference" type="radio" value="system" checked />
+          <span aria-hidden="true">&#9881;&#65039;</span>
+          <span class="visually-hidden">System default</span>
+        </label>
+        <label class="theme-control theme-pick" data-theme-pick="dark">
+          <input name="theme-preference" type="radio" value="dark" />
+          <span aria-hidden="true">&#127766;</span>
+          <span class="visually-hidden">Dark</span>
+        </label>
+        <a href="./index.html"> &larr; Home </a>
+      </div>
+    </details>
     <main class="resume">
-      <header class="resume-header">
+      <header class="resume-hero">
         <h1>Laurin Vasquez</h1>
 
-        <p>
-          208-313-0979 |
-          <a href="mailto:laurin171125@gmail.com">
-            laurin171125@gmail.com
-          </a>
-          |
-          <a href="https://www.linkedin.com/in/laulin-vásquez">
-            LinkedIn
-          </a>
-          |
-          <a href="https://github.com/LaulinVasquez">
-            GitHub
-          </a>
-        </p>
+        <div class="resume-contact">
+          <span>208-915-9133 </span>
+          <a href="mailto:laurin171125@gmail.com"> laurin171125@gmail.com </a>
+          <a href="https://www.linkedin.com/in/laulin-vásquez"> LinkedIn </a>
+          <a href="https://github.com/LaulinVasquez"> GitHub </a>
+        </div>
 
-        <p class="summary">
-          Computer Science student with experience in software development,
-          data analytics, leadership, and operations management. Skilled in
-          building web applications, analyzing business data, and leading teams
-          to improve productivity and performance.
+        <p class="resume-summary">
+          Computer Science student with experience in software development, data
+          analytics, leadership, and operations management. Skilled in building
+          web applications, analyzing business data, and leading teams to
+          improve productivity and performance.
         </p>
       </header>
 
-      <section>
-        <h2>Skills</h2>
+      <div class="resume-grid">
+        <aside class="resume-sidebar">
+          <section class="resume-card">
+            <h2>Skills</h2>
 
-        <ul>
-          <li>
-            <strong>Languages & Frameworks:</strong>
-            Python, C#, JavaScript, TypeScript, HTML, CSS, React, Node.js,
-            Vite, Vue, Bootstrap
-          </li>
+            <div class="skill-group">
+              <h3>Languages</h3>
 
-          <li>
-            <strong>Tools & Platforms:</strong>
-            Excel, Power BI, SQL Server, MySQL Workbench, Office 365 Suite
-          </li>
+              <div class="skill-tags">
+                <span>Python</span>
+                <span>C#</span>
+                <span>JavaScript</span>
+                <span>TypeScript</span>
+                <span>HTML</span>
+                <span>CSS</span>
+              </div>
+            </div>
 
-          <li>
-            <strong>Other Skills:</strong>
-            Data Analysis & Visualization, Reporting & Dashboard Creation,
-            Team Leadership, Supervisory Experience, Bilingual (Spanish &
-            English)
-          </li>
-        </ul>
-      </section>
+            <div class="skill-group">
+              <h3>Frameworks</h3>
 
-      <section>
-        <h2>Education</h2>
+              <div class="skill-tags">
+                <span>React</span>
+                <span>Node.js</span>
+                <span>Vue</span>
+                <span>Bootstrap</span>
+                <span>Vite</span>
+              </div>
+            </div>
 
-        <article>
-          <h3>
-            Brigham Young University – Idaho
-          </h3>
+            <div class="skill-group">
+              <h3>Tools</h3>
 
-          <p>
-            Bachelor of Science in Computer Science
-            <br />
-            September 2023 – December 2026
-            <br />
-            Rexburg, Idaho
-          </p>
+              <div class="skill-tags">
+                <span>Excel</span>
+                <span>Power BI</span>
+                <span>SQL Server</span>
+                <span>MySQL</span>
+                <span>Office 365</span>
+              </div>
+            </div>
 
-          <p>
-            <strong>GPA:</strong> 3.89
-          </p>
+            <div class="skill-group">
+              <h3>Other</h3>
 
-          <ul>
-            <li>
-              Web Development (JavaScript, TypeScript, HTML, CSS, React,
-              Vite, Node.js, Vue, Netlify)
-            </li>
+              <div class="skill-tags">
+                <span>Data Analysis</span>
+                <span>Visualization</span>
+                <span>Leadership</span>
+                <span>Reporting</span>
+                <span>Bilingual</span>
+              </div>
+            </div>
+          </section>
+          <section class="resume-card">
+            <h2>Education</h2>
 
-            <li>
-              Data Structures, Algorithms, and Object-Oriented Programming
-              (Python, C#, JavaScript)
-            </li>
+            <h3>Brigham Young University – Idaho</h3>
 
-            <li>
-              Database Management (MySQL Workbench, SQL Server)
-            </li>
+            <p><strong>Bachelor of Software Engineering</strong></p>
 
-            <li>
-              Back-End Development (JavaScript, TypeScript, Python, C#)
-            </li>
+            <p>April 2024 – April 2027</p>
 
-            <li>
-              WebSocket Development and Real-Time Communication
-            </li>
-          </ul>
-        </article>
-      </section>
+            <p>Rexburg, Idaho</p>
 
-      <section>
-        <h2>Professional Experience</h2>
+            <p><strong>GPA:</strong> 3.87</p>
+          </section>
+        </aside>
 
-        <article>
-          <h3>
-            Assistant Manager – Data Analytics Specialist / Supervisor
-          </h3>
+        <section class="resume-main">
+          <section class="resume-card">
+            <h2>Professional Experience</h2>
 
-          <p>
-            Brigham Young University – Idaho | Rexburg, Idaho
-          </p>
+            <article class="experience-item">
+              <div class="experience-title">
+                <h3>Assistant Manager – Data Analytics Specialist</h3>
+              </div>
 
-          <ul>
-            <li>
-              Analyzed operational data using Python and R to generate weekly
-              performance reports supporting leadership decisions.
-            </li>
+              <p class="experience-company">
+                Brigham Young University – Idaho · Rexburg, ID
+              </p>
 
-            <li>
-              Built Excel and Power BI dashboards to track KPIs and improve
-              visibility into team productivity and resource allocation.
-            </li>
+              <ul>
+                <li>
+                  Analyzed operational data using Python and R to generate
+                  weekly performance reports.
+                </li>
 
-            <li>
-              Supervised and trained student teams while streamlining daily
-              workflows and maintaining consistent performance.
-            </li>
+                <li>
+                  Built Excel and Power BI dashboards to track KPIs and improve
+                  visibility into team productivity.
+                </li>
 
-            <li>
-              Developed data-driven recommendations that reduced processing
-              errors and improved operational efficiency.
-            </li>
-          </ul>
-        </article>
+                <li>
+                  Supervised and trained student teams while streamlining daily
+                  workflows.
+                </li>
 
-        <article>
-          <h3>
-            Assistant Manager – Logistics Specialist / Supervisor
-          </h3>
+                <li>
+                  Developed data-driven recommendations that improved efficiency
+                  and reduced errors.
+                </li>
+              </ul>
+            </article>
 
-          <p>
-            Brigham Young University – Idaho | Rexburg, Idaho
-          </p>
+            <article class="experience-item">
+              <div class="experience-title">
+                <h3>Assistant Manager – Logistics Specialist</h3>
+              </div>
 
-          <ul>
-            <li>
-              Oversaw logistics operations and coordinated inventory tracking,
-              scheduling, and workflow management.
-            </li>
+              <p class="experience-company">
+                Brigham Young University – Idaho · Rexburg, ID
+              </p>
 
-            <li>
-              Prepared Excel reports summarizing inventory levels, staffing
-              requirements, and workflow metrics.
-            </li>
+              <ul>
+                <li>
+                  Oversaw logistics operations, scheduling, and inventory
+                  tracking.
+                </li>
 
-            <li>
-              Provided leadership and mentorship to teams of 10–15 members.
-            </li>
+                <li>Prepared workflow and staffing reports using Excel.</li>
 
-            <li>
-              Managed scheduling, workload distribution, and performance
-              oversight for approximately 35 staff members.
-            </li>
-          </ul>
-        </article>
+                <li>Led and mentored teams of 35–50 members.</li>
 
-        <article>
-          <h3>
-            Collections Specialist
-          </h3>
+                <li>
+                  Managed scheduling and workload distribution for 35+ staff
+                  members.
+                </li>
+              </ul>
+            </article>
 
-          <p>
-            Scotia GBS (Scotiabank Group) | Santo Domingo,
-            Dominican Republic
-          </p>
+            <article class="experience-item">
+              <div class="experience-title">
+                <h3>Collections Specialist</h3>
+              </div>
 
-          <ul>
-            <li>
-              Managed CRM systems to document customer interactions and track
-              account activity.
-            </li>
+              <p class="experience-company">
+                Scotia GBS (Scotiabank Group) · Santo Domingo, DR
+              </p>
 
-            <li>
-              Built Excel and Power BI dashboards for the Caribbean region,
-              improving KPI visibility and reducing manual reporting effort.
-            </li>
+              <ul>
+                <li>Managed CRM systems and customer account tracking.</li>
 
-            <li>
-              Queried SQL databases to extract call-result data and generate
-              performance insights for management teams.
-            </li>
-          </ul>
-        </article>
-      </section>
+                <li>Built Power BI dashboards for Caribbean operations.</li>
+
+                <li>
+                  Queried SQL databases to generate business insights and
+                  performance reports.
+                </li>
+              </ul>
+            </article>
+          </section>
+        </section>
+      </div>
     </main>
-
-    <footer>
-      <p>&copy; 2026 Laurin Vasquez. All rights reserved.</p>
-    </footer>
-
     <script src="js/main.js"></script>
   </body>
 </html>
-
