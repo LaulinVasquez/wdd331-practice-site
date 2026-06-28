@@ -1,0 +1,51 @@
+/* Default */
+:root{
+    color-scheme: light;
+}
+
+/* Force dark */
+
+html:has(input[value="dark"]:checked){
+    color-scheme: dark;
+}
+
+/* Follow OS */
+
+html:has(input[value="system"]:checked){
+    color-scheme: light dark;
+}
+
+body{
+    font-family: system-ui;
+    max-width:700px;
+    margin:auto;
+    padding:2rem;
+}
+
+.controls{
+    display:flex;
+    gap:2rem;
+    margin-bottom:2rem;
+}
+
+.scheme-demo{
+    display:grid;
+    gap:1rem;
+    padding:2rem;
+    border:1px solid;
+    border-radius:12px;
+    background:Canvas;
+    color:CanvasText;
+}
+
+input,
+textarea,
+select,
+button{
+    font:inherit;
+    padding:.6rem;
+}
+
+textarea{
+    min-height:120px;
+}
