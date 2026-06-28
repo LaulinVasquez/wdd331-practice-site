@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>color-scheme Demo</title>
+  </head>
+  <body>
+    <h1>CSS color-scheme Demo</h1>
+    <nav>
+      <a href="../../index.html">&larr; Home</a>
+    </nav>
+    <p>
+      Change the color-scheme value below and watch the native controls update
+      automatically.
+    </p>
+    <div class="controls">
+      <label>
+        <input type="radio" name="scheme" value="light" checked />
+        light
+      </label>
+      <label>
+        <input type="radio" name="scheme" value="dark" />
+        dark
+      </label>
+
+      <label>
+        <input type="radio" name="scheme" value="system" />
+        light dark (system)
+      </label>
+    </div>
+
+    <form class="scheme-demo">
+      <label for="sd-name">Name</label>
+      <input type="text" id="sd-name" placeholder="Your name" />
+
+      <label for="sd-email">Email</label>
+      <input type="email" id="sd-email" placeholder="you@example.com" />
+
+      <label for="sd-date">Date</label>
+      <input type="date" id="sd-date" />
+
+      <label for="sd-color">Favorite color</label>
+      <input type="color" id="sd-color" value="#006eb6" />
+
+      <label for="sd-range">Volume</label>
+      <input type="range" id="sd-range" value="50" />
+
+      <label for="sd-select">Category</label>
+
+      <select id="sd-select">
+        <option>Design</option>
+        <option>Development</option>
+        <option>Research</option>
+      </select>
+
+      <label>
+        <input type="checkbox" checked />
+        Subscribe to updates
+      </label>
+
+      <div>
+        <label><input type="radio" name="size" checked /> Small</label>
+
+        <label><input type="radio" name="size" /> Medium</label>
+
+        <label><input type="radio" name="size" /> Large</label>
+      </div>
+
+      <label for="sd-msg">Message</label>
+
+      <textarea id="sd-msg"></textarea>
+
+      <button>Submit</button>
+    </form>
+  </body>
+</html>
