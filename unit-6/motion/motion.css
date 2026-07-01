@@ -1,0 +1,331 @@
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-family-body);
+}
+
+.site-header {
+  max-width: 1200px;
+  margin: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1.5rem 0;
+}
+
+.site-name {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.site-header nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.site-header nav a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.dashboard-header {
+  max-width: 1200px;
+  margin: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h1 {
+  font-size: var(--font-size-display);
+  margin-bottom: 0.5rem;
+}
+
+.dashboard-header p {
+  color: var(--color-text-muted);
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.status-badge {
+  background: var(--accent-400);
+  color: white;
+
+  padding: 0.35rem 0.9rem;
+
+  border-radius: 999px;
+
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.status-label {
+  color: var(--color-text-muted);
+}
+.actions {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  padding: 0.9rem 1.3rem;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: var(--color-accent);
+  color: white;
+}
+
+.btn-secondary {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+}
+
+.btn-ghost {
+  background: transparent;
+  border: 1px dashed var(--color-border);
+}
+
+/* CARDS */
+.card-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.card-header h2 {
+  font-size: var(--font-size-xl);
+  margin: 0;
+}
+
+.card-tag {
+  background: var(--accent-300);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+
+/* CARD varianst green for in progress, orange for Up Next */
+.card-tag--active {
+  background: #22c55e;
+}
+
+.card-tag--pending {
+  background: #f59e0b;
+}
+
+.card p {
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+}
+.card-link {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  nav a {
+    transition:
+      color 180ms ease-out,
+      transform 180ms ease-out;
+  }
+
+  nav a:hover,
+  nav a:focus-visible {
+    color: var(--color-accent);
+    transform: translateY(-2px);
+    transition:
+      color 120ms ease-in,
+      transform 120ms ease-in;
+  }
+
+  .nav-cta {
+    transition:
+      background-color 220ms ease,
+      color 220ms ease,
+      transform 220ms ease,
+      box-shadow 220ms ease;
+  }
+
+  .nav-cta:hover,
+  .nav-cta:focus-visible {
+    background: var(--color-accent);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    transition:
+      background-color 150ms ease-in,
+      color 150ms ease-in,
+      transform 150ms ease-in,
+      box-shadow 150ms ease-in;
+  }
+
+  .btn-primary {
+    transition:
+      background-color 220ms ease,
+      transform 220ms ease,
+      box-shadow 220ms ease;
+  }
+
+  .btn-primary:hover,
+  .btn-primary:focus-visible {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    transition:
+      background-color 150ms ease-in,
+      transform 150ms ease-in,
+      box-shadow 150ms ease-in;
+  }
+
+  .btn-secondary {
+    transition:
+      border-color 180ms ease,
+      background-color 180ms ease,
+      transform 180ms ease;
+  }
+
+  .btn-secondary:hover,
+  .btn-secondary:focus-visible {
+    background: var(--color-surface);
+    transform: translateY(-2px);
+    transition:
+      border-color 120ms ease-in,
+      background-color 120ms ease-in,
+      transform 120ms ease-in;
+  }
+
+  .btn-ghost {
+    transition:
+      color 160ms ease,
+      background-color 160ms ease;
+  }
+
+  .btn-ghost:hover,
+  .btn-ghost:focus-visible {
+    background: color-mix(in srgb, var(--color-accent) 12%, transparent);
+    color: var(--color-accent);
+    transition:
+      color 100ms ease-in,
+      background-color 100ms ease-in;
+  }
+
+  .card {
+    transition:
+      transform 220ms ease,
+      box-shadow 220ms ease,
+      border-color 220ms ease;
+  }
+
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-accent);
+    transition:
+      transform 140ms ease-in,
+      box-shadow 140ms ease-in,
+      border-color 140ms ease-in;
+  }
+
+  .card-link {
+    transition:
+      color 180ms ease,
+      letter-spacing 180ms ease;
+  }
+
+  .card:hover .card-link {
+    color: var(--color-accent);
+
+    letter-spacing: 0.04em;
+
+    transition:
+      color 120ms ease-in,
+      letter-spacing 120ms ease-in;
+  }
+
+  .status-badge {
+    animation-name: pulse;
+    animation-duration: 1.8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  @keyframes pulse {
+    from {
+      transform: scale(1);
+      opacity: 0.85;
+    }
+
+    to {
+      transform: scale(1.08);
+      opacity: 1;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  nav a,
+  .nav-cta,
+  .btn,
+  .card,
+  .card-link {
+    transition: none;
+  }
+
+  .status-badge {
+    opacity: 0.95;
+    animation-name: reducedPulse;
+    animation-duration: 6s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  @keyframes reducedPulse {
+    from {
+      opacity: 0.92;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+}
