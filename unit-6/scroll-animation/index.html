@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll-Driven Animation Demo</title>
+    <link rel="stylesheet" href="../../dist/styles.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <header class="demo-hero">
+      <nav class="demo-nav">
+        <a href="../../index.html">&larr; Home</a>
+        <a href="#features">Features</a>
+        <a href="#projects">Projects</a>
+        <details class="theme-menu">
+          <summary class="theme-control">
+            <span class="visually-hidden">Color scheme</span>
+          </summary>
+          <div
+            class="theme-extra"
+            role="group"
+            aria-label="Choose color scheme"
+          >
+            <label class="theme-control theme-pick" data-theme-pick="light">
+              <input name="theme-preference" type="radio" value="light" />
+              <span aria-hidden="true">&#9788;&#65039;</span>
+              <span class="visually-hidden">Light</span>
+            </label>
+            <label class="theme-control theme-pick" data-theme-pick="system">
+              <input
+                name="theme-preference"
+                type="radio"
+                value="system"
+                checked
+              />
+              <span aria-hidden="true">&#9881;&#65039;</span>
+              <span class="visually-hidden">System default</span>
+            </label>
+            <label class="theme-control theme-pick" data-theme-pick="dark">
+              <input name="theme-preference" type="radio" value="dark" />
+              <span aria-hidden="true">&#127766;</span>
+              <span class="visually-hidden">Dark</span>
+            </label>
+          </div>
+        </details>
+      </nav>
+
+      <section class="hero-content">
+        <p class="eyebrow">Unit 6 Demo</p>
+        <h1>Scroll-Driven Animations</h1>
+        <p>
+          This page demonstrates how CSS can connect animation progress to
+          scrolling instead of time.
+        </p>
+      </section>
+    </header>
+
+    <main>
+      <section class="intro-section">
+        <h2>What this demo shows</h2>
+        <p>
+          The blue bar at the top uses a root scroll timeline. The cards below
+          use view timelines so they animate as each card enters the viewport.
+        </p>
+      </section>
+
+      <section id="features" class="feature-section">
+        <article class="feature-card">
+          <span class="card-number">01</span>
+          <h2>Root Scroll Progress</h2>
+          <p>
+            The progress bar grows horizontally as the page scrolls from top to
+            bottom. The animation is driven by scroll position, not seconds.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <span class="card-number">02</span>
+          <h2>View Timeline</h2>
+          <p>
+            Each card fades and slides into place when it enters the viewport.
+            The card itself becomes the animation trigger.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <span class="card-number">03</span>
+          <h2>Animation Range</h2>
+          <p>
+            The entrance is limited to a specific part of the card's journey, so
+            the motion finishes before the card is fully settled on screen.
+          </p>
+        </article>
+      </section>
+
+      <section id="projects" class="project-section">
+        <h2>Portfolio Motion Examples</h2>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <h3>Design Tokens</h3>
+            <p>
+              A token-first CSS system using semantic colors, spacing, and type.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <h3>Fluid Type</h3>
+            <p>
+              A modular type scale using clamp() and semantic typography roles.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <h3>Variable Fonts</h3>
+            <p>A variable font demo showing weight and custom font axes.</p>
+          </article>
+
+          <article class="project-card">
+            <h3>Dark Mode</h3>
+            <p>
+              A color-scheme demo showing native controls responding to themes.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="closing-section">
+        <h2>Why this matters</h2>
+        <p>
+          Scroll-driven animations can replace JavaScript scroll listeners for
+          many common effects. They are declarative, smoother, and easier to
+          guard with prefers-reduced-motion.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
