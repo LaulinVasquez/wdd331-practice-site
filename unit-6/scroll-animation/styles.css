@@ -1,0 +1,176 @@
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-family-body);
+  margin: 0;
+}
+
+.scroll-progress {
+  position: fixed;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 6px;
+
+  background: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+
+  z-index: 1000;
+}
+
+.demo-hero {
+  min-height: 90vh;
+  display: grid;
+  align-content: center;
+  padding: var(--spacing-xl);
+}
+
+.demo-nav {
+  position: absolute;
+  top: var(--spacing-lg);
+  left: var(--spacing-lg);
+  right: var(--spacing-lg);
+
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+}
+
+.demo-nav a {
+  color: var(--color-link);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.hero-content {
+  max-width: 850px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.eyebrow {
+  color: var(--color-accent);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.hero-content h1 {
+  font-size: var(--font-size-display);
+  line-height: var(--line-height-display);
+}
+
+.hero-content p,
+.intro-section p,
+.closing-section p {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-lg);
+}
+
+.intro-section,
+.closing-section {
+  max-width: 800px;
+  margin-inline: auto;
+  padding: 25vh var(--spacing-xl);
+  text-align: center;
+}
+
+.feature-section {
+  display: grid;
+  gap: var(--spacing-xl);
+  max-width: 950px;
+  margin-inline: auto;
+  padding: var(--spacing-xl);
+}
+
+.feature-card,
+.project-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.feature-card {
+  padding: var(--spacing-xl);
+  min-height: 45vh;
+  display: grid;
+  align-content: center;
+}
+
+.card-number {
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: var(--font-size-xl);
+}
+
+.feature-card h2,
+.project-card h3 {
+  font-family: var(--font-family-heading);
+}
+
+.feature-card p,
+.project-card p {
+  color: var(--color-text-muted);
+}
+
+.project-section {
+  max-width: 1100px;
+  margin-inline: auto;
+  padding: 25vh var(--spacing-xl);
+}
+
+.project-section > h2 {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.project-card {
+  padding: var(--spacing-lg);
+}
+
+/* 
+  Scroll-driven animations.
+  Change the transform values inside the keyframes to play with the animation.
+  Example: increase translateY(4rem) to translateY(8rem) for stronger movement.
+*/
+
+@media (prefers-reduced-motion: no-preference) {
+  .scroll-progress {
+    animation-name: scroll-progress;
+    animation-timeline: scroll(root);
+    animation-duration: 1s;
+  }
+
+  .feature-card,
+  .project-card {
+    animation-name: reveal-card;
+    animation-timeline: view();
+    animation-range: entry 10% cover 35%;
+    animation-fill-mode: both;
+  }
+}
+
+@keyframes scroll-progress {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes reveal-card {
+  from {
+    opacity: 0;
+    transform: translateY(4rem) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
