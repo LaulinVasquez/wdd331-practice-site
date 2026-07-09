@@ -12,6 +12,7 @@
 @import url('components/theme-toggle.css') layer(components);
 @import url('components/effects.css') layer(components);
 @import url('components/resume.css') layer(components);
+@import url('components/icon.css') layer(components);
 
 @import url('utilities/utilities.css') layer(utilities);
 
