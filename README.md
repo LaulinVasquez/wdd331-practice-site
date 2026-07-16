@@ -39,6 +39,10 @@ The site deploys automatically to GitHub Pages whenever changes are pushed to th
 │
 ├── unit-1/
 ├── unit-2/
+├── unit-3/
+├── unit-4/
+├── unit-5/
+├── unit-6/
 │
 ├── package.json
 ├── postcss.config.js

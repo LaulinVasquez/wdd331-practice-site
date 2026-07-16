@@ -1,68 +1,107 @@
 :root {
   color-scheme: light;
+
   /* ---- Seeds ---- */
-  --seed-bg: #f4f7fb;
-  --seed-surface: #ffffff;
-  --seed-text: #0f172a;
-  --seed-text-muted: #64748b;
+  --seed-bg: #eef4fa;
+  --seed-surface: #f8fbff;
+  --seed-text: #10233f;
+  --seed-text-muted: #586b83;
 
-  --seed-accent: oklch(0.72 0.17 220);
+  --seed-accent: oklch(0.7 0.16 225);
 
-  --seed-accent-hover: color-mix(in oklch, var(--seed-accent) 80%, black);
+  --seed-accent-hover: color-mix(in oklch, var(--seed-accent) 78%, black);
 
   --seed-link: var(--seed-accent);
   --seed-link-hover: var(--seed-accent-hover);
 
-  --seed-border: #dbe4ee;
-  --seed-border-strong: #b8c5d6;
+  --seed-border: #cad8e8;
+  --seed-border-strong: #9eb4ca;
 
   /* ---- Accent ramp ---- */
-  --accent-200: color-mix(in oklch, var(--seed-accent) 30%, white);
-  --accent-300: color-mix(in oklch, var(--seed-accent) 50%, white);
-  --accent-400: color-mix(in oklch, var(--seed-accent) 75%, white);
+  --accent-200: color-mix(in oklch, var(--seed-accent) 25%, white);
+  --accent-300: color-mix(in oklch, var(--seed-accent) 45%, white);
+  --accent-400: color-mix(in oklch, var(--seed-accent) 68%, white);
   --accent-500: var(--seed-accent);
-  --accent-600: color-mix(in oklch, var(--seed-accent) 80%, black);
-  --accent-700: color-mix(in oklch, var(--seed-accent) 60%, black);
-  --accent-800: color-mix(in oklch, var(--seed-accent) 40%, black);
+  --accent-600: color-mix(in oklch, var(--seed-accent) 82%, black);
+  --accent-700: color-mix(in oklch, var(--seed-accent) 64%, black);
+  --accent-800: color-mix(in oklch, var(--seed-accent) 42%, black);
 }
-  /* User chose dark */
-  html:has(input[name="theme-preference"][value="dark"]:checked) {
+
+/* User chose dark */
+html:has(input[name="theme-preference"][value="dark"]:checked) {
+  color-scheme: dark;
+}
+
+/* User chose system and OS is dark */
+@media (prefers-color-scheme: dark) {
+  html:has(input[name="theme-preference"][value="system"]:checked) {
     color-scheme: dark;
   }
-  /* User chose system and OS is dark */
-  @media (prefers-color-scheme: dark) {
-    html:has(input[name="theme-preference"][value="system"]:checked) {
-      color-scheme: dark;
-    }
-  }
+}
+
 :root,
 html {
-    /* ---- Semantic tokens ---- */
-    --color-bg: light-dark(var(--seed-bg), oklch(0.18 0.02 260));
-    --color-surface: light-dark(var(--seed-surface), oklch(0.22 0.03 260));
-    --color-text: light-dark(var(--seed-text), oklch(0.88 0.02 260));
-    --color-text-muted: light-dark(var(--seed-text-muted), oklch(0.68 0.03 250));
-    --color-accent: light-dark(var(--seed-accent), oklch(0.62 0.15 240));
-    --color-accent-hover: light-dark(var(--seed-accent-hover), oklch(0.68 0.18 240));
-    --color-link: light-dark(var(--seed-link), oklch(0.65 0.16 240));
-    --color-link-hover: light-dark(var(--seed-link-hover), oklch(0.72 0.18 240));
-    --color-border: light-dark(var(--seed-border), oklch(0.32 0.02 260));
-    --color-border-strong: light-dark(var(--seed-border-strong), oklch(0.38 0.02 260));
-    
-    /* Tint the native checkboxes, radios, and range sliders */
-    accent-color: var(--color-accent);
+  /* ---- Semantic tokens ---- */
+  --color-bg: light-dark(var(--seed-bg), #061629);
 
-    /* ---- Header chrome ---- */
-    --header-bg: var(--color-accent);
-    --header-text: light-dark(#ffffff, #f0f4f8);
+  --color-surface: light-dark(var(--seed-surface), #0b2038);
 
-    /* ---- Theme toggle (consumed by theme-toggle.css) ---- */
-    --theme-toggle-bg: color-mix(in srgb, var(--header-text) 20%, var(--header-bg));
-    --theme-toggle-border: color-mix(in srgb, var(--header-text) 40%, var(--header-bg));
-    --theme-toggle-border-hover: color-mix(in srgb, var(--header-text) 55%, var(--header-bg));
-    
-    /* ---- Shadows ---- */
-    --shadow-color: light-dark(rgb(0 0 0 / 0.09), rgb(0 0 0 / 0.28));
-    --shadow-sm: 0 1px 2px 0 var(--shadow-color);
-    --shadow-md: 0 1px 3px 0 var(--shadow-color);
+  --color-surface-raised: light-dark(#ffffff, #102a47);
+
+  --color-text: light-dark(var(--seed-text), #dcecff);
+
+  --color-text-muted: light-dark(var(--seed-text-muted), #93aac2);
+
+  --color-accent: light-dark(var(--seed-accent), #38bdf8);
+
+  --color-accent-hover: light-dark(var(--seed-accent-hover), #67d3ff);
+
+  --color-link: light-dark(var(--seed-link), #38bdf8);
+
+  --color-link-hover: light-dark(var(--seed-link-hover), #7ddcff);
+
+  --color-border: light-dark(var(--seed-border), #1c3c5d);
+
+  --color-border-strong: light-dark(var(--seed-border-strong), #315779);
+
+  accent-color: var(--color-accent);
+
+  /* ---- Header chrome ---- */
+  --header-bg: light-dark(#0b2745, #071a2f);
+
+  --header-text: #dcecff;
+
+  /* ---- Theme toggle ---- */
+  --theme-toggle-bg: color-mix(
+    in srgb,
+    var(--header-text) 12%,
+    var(--header-bg)
+  );
+
+  --theme-toggle-bg-hover: color-mix(
+    in srgb,
+    var(--header-text) 20%,
+    var(--header-bg)
+  );
+
+  --theme-toggle-border: color-mix(
+    in srgb,
+    var(--header-text) 28%,
+    var(--header-bg)
+  );
+
+  --theme-toggle-border-hover: color-mix(
+    in srgb,
+    var(--header-text) 48%,
+    var(--header-bg)
+  );
+
+  /* ---- Shadows ---- */
+  --shadow-color: light-dark(rgb(20 52 82 / 0.12), rgb(0 0 0 / 0.35));
+
+  --shadow-sm: 0 2px 8px var(--shadow-color);
+
+  --shadow-md: 0 12px 30px var(--shadow-color);
+
+  --shadow-lg: 0 24px 70px var(--shadow-color);
 }
