@@ -3,24 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Laurin Vasquez's web development and modern CSS portfolio."/>
     <link rel="stylesheet" href="dist/styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <title>Laurin Vasquez - Practice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+
+    <title>Laurin Vasquez | Web Developer</title>
   </head>
-  <body>
-    <nav>
+
+  <body class="home-page" id="top">
+    <header class="home-header">
+      <a
+        class="home-logo"
+        href="index.html"
+        aria-label="Laurin Vasquez homepage"
+      >
+        LV<span>.</span>
+      </a>
+
+      <nav class="home-nav" aria-label="Main navigation">
+        <a href="#featured">Featured</a>
+        <a href="#course-work">Course Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
       <details class="theme-menu">
         <summary class="theme-control">
           <span class="visually-hidden">Color scheme</span>
         </summary>
+
         <div class="theme-extra" role="group" aria-label="Choose color scheme">
           <label class="theme-control theme-pick" data-theme-pick="light">
             <input name="theme-preference" type="radio" value="light" />
+
             <span aria-hidden="true">&#9788;&#65039;</span>
             <span class="visually-hidden">Light</span>
           </label>
+
           <label class="theme-control theme-pick" data-theme-pick="system">
             <input
               name="theme-preference"
@@ -28,185 +49,420 @@
               value="system"
               checked
             />
+
             <span aria-hidden="true">&#9881;&#65039;</span>
             <span class="visually-hidden">System default</span>
           </label>
+
           <label class="theme-control theme-pick" data-theme-pick="dark">
             <input name="theme-preference" type="radio" value="dark" />
+
             <span aria-hidden="true">&#127766;</span>
             <span class="visually-hidden">Dark</span>
           </label>
         </div>
       </details>
-      <h2>Assignments</h2>
+    </header>
 
-      <details close>
-        <summary>Resume and Contact form</summary>
+    <main class="home-main">
+      <section class="home-hero">
+        <div class="home-hero-copy">
+          <p class="home-eyebrow">Software Engineer · Web Developer</p>
 
-        <ul>
-          <li>
-            <a href="resume.html">
-              My Resume
-            </a>
-          </li>
-          <li>
-            <a href="contact.html">
-              Send me a message!
-            </a>
-          </li>
-        </ul>
-      </details>
-      <details close>
-        <summary>Unit 1</summary>
+          <h1>
+            I build modern experiences for the
+            <span>web.</span>
+          </h1>
 
-        <ul>
-          <li>
-            <a href="unit-1/custom-properties/index.html">
-              Custom Properties and Nesting
-            </a>
-          </li>
-        </ul>
-      </details>
+          <p class="home-hero-description">
+            Hi, I’m Laurin Vasquez. I enjoy creating responsive, accessible, and
+            visually polished interfaces while learning modern CSS, JavaScript,
+            and full-stack development.
+          </p>
 
-      <details close>
-        <summary>Unit 2</summary>
+          <div class="home-actions">
+            <a class="home-button home-button-primary" href="#featured">
+              Explore my work
+            </a>
 
-        <ul>
-          <li>
-            <a href="unit-2/layered-components/index.html">
-              Layered and Components
+            <a class="home-button home-button-secondary" href="resume.html">
+              View résumé
             </a>
-          </li>
+          </div>
 
-          <li>
-            <a href="unit-2/sandbox/index.html"> @scope </a>
-          </li>
+          <ul class="home-stats">
+            <li>
+              <strong>6 Units</strong>
+              <span>Advanced CSS work</span>
+            </li>
 
-          <li>
-            <a href="unit-2/postcss-demo/index.html"> PostCSS </a>
-          </li>
-        </ul>
-      </details>
+            <li>
+              <strong>15+ Demos</strong>
+              <span>Responsive projects</span>
+            </li>
 
-      <details close>
-        <summary>Unit 3</summary>
-
-        <ul>
-          <li>
-            <a href="unit-3/index.html"> Used of contrast-color() </a>
-          </li>
-          <li>
-            <a href="unit-3/shadows/index.html"> Shadows </a>
-          </li>
-          <li>
-            <a href="unit-3/visual-effects/index.html"> Visual Effects </a>
-          </li>
-        </ul>
-      </details>
-      <details close>
-        <summary>Unit 4</summary>
-        <ul>
-          <li>
-            <a href="unit-4/index.html">
-              Grid areas lines
-            </a>
-          </li>
-          <li>
-            <a href="unit-4/grid-layouts/editorial.html">
-              Editorial
-            </a>
-          </li>
-          <li>
-            <a href="unit-4/grid-layouts/cards.html">
-              Cards
-            </a>
-          </li>
-          <li>
-            <a href="unit-4/display-contents/index.html">
-              display:contents
-            </a>
-          </li>
-          <li>
-            <a href="unit-4/advanced/container-demo.html">
-              Container demo
-            </a>
-          </li>
-          <li>
-            <a href="unit-4/advanced/sticky-demo.html">
-              sticky demo
-            </a>
-          </li>
-      </details>
-      <details close>
-        <summary>Unit 5</summary>
-        <ul>
-          <li>
-            <a href="unit-5/variable-font-axes/index.html">
-              Variable font Axes
-            </a>
-          </li>
-          <li>
-            <a href="unit-5/color-scheme/index.html">
-              Color-scheme
-            </a>
-          </li>
+            <li>
+              <strong>Accessible</strong>
+              <span>Reduced-motion support</span>
+            </li>
           </ul>
-      </details>
-      <details close>
-        <summary>Unit 6</summary>
-        <ul>
-          <li>
-            <a href="unit-6/motion/index.html">
-              Motion
-            </a>
-          </li>
-          <li>
-            <a href="unit-6/scroll-animation/index.html">
-              Scroll Animation
-            </a>
-          </li>
-          </ul>
-      </details>
-    </nav>
-    <h1>Welcome! to the Homepage</h1>
+        </div>
 
-    <div class="container" id="bio-card">
-      <h2>Laurin's bio</h2>
-      <div class="carousel">
-        <button class="prev">&#10094;</button>
-        <div class="carousel-track"></div>
-        <button class="next">&#10095;</button>
-      </div>
-      <p>
-        Hi, I’m <strong>Laurin Vasquez</strong> 👋 I’m a student who enjoys
-        building things for the web and figuring out how everything works behind
-        the scenes. I like turning simple ideas into real projects, whether
-        that’s designing clean layouts, adding interactive features, or
-        experimenting with new tools. <br /><br />
-        I’ve been working with HTML, CSS, and JavaScript, and I enjoy using
-        frameworks like Tailwind and Bootstrap to build responsive, modern
-        interfaces. On the backend side, I’ve explored Node.js and Express,
-        which has helped me understand how to handle routing, data, and the full
-        request-response cycle. I’ve also started working with React to build
-        more dynamic, component-based user interfaces.
-        <br /><br />
-        When I’m not coding, I’m usually working on personal projects, learning
-        something new, or trying to level up my skills one step at a time. This
-        site is where I document that journey and share what I’m building along
-        the way.
-      </p>
-    </div>
-    <h3>Purpose of the Site:</h3>
-    <div class="container">
-      <p>
-        The purpose of this site is to practice my HTML and CSS skills. I will
-        use it to experiment with layouts, design tokens, and different web
-        design techniques as I continue learning.
-      </p>
-    </div>
+        <div class="home-visual" aria-hidden="true">
+          <div class="home-code-card">
+            <div class="home-code-toolbar">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            <pre><code><span class="code-blue">.developer</span> {
+  <span class="code-light">display</span>: grid;
+  <span class="code-light">skills</span>: HTML CSS JavaScript;
+  <span class="code-light">focus</span>: accessibility;
+}
+
+<span class="code-blue">@container</span> (min-width: 40rem) {
+  <span class="code-blue">.project</span> {
+    <span class="code-light">layout</span>: responsive;
+  }
+}</code></pre>
+          </div>
+
+          <span class="home-floating-chip home-chip-one"> Modern CSS </span>
+
+          <span class="home-floating-chip home-chip-two">
+            Responsive Design
+          </span>
+        </div>
+      </section>
+
+      <section id="featured">
+        <div class="home-section-heading">
+          <p class="home-eyebrow">Featured work</p>
+
+          <h2>Projects that show what I can build</h2>
+
+          <p>
+            A selection of my strongest layout, animation, and responsive design
+            exercises.
+          </p>
+        </div>
+
+        <div class="featured-grid">
+          <article class="featured-card">
+            <div class="featured-preview">
+              <div class="featured-preview-circle"></div>
+            </div>
+
+            <div class="featured-content">
+              <p class="home-eyebrow">Unit 6</p>
+              <h3>Motion and Animation</h3>
+
+              <p>
+                Motion paths, transitions, scroll-driven animations, and
+                reduced-motion fallbacks.
+              </p>
+
+              <a href="unit-6/motion/index.html">
+                View project <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="featured-card">
+            <div class="featured-preview">
+              <div class="featured-preview-grid">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class="featured-content">
+              <p class="home-eyebrow">Unit 4</p>
+              <h3>Responsive Card Grid</h3>
+
+              <p>
+                A flexible card system using Grid, safe track sizing, and
+                progressive enhancement with subgrid.
+              </p>
+
+              <a href="unit-4/grid-layouts/cards.html">
+                View project <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="featured-card">
+            <div class="featured-preview">
+              <div class="featured-preview-grid">
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class="featured-content">
+              <p class="home-eyebrow">Unit 4</p>
+              <h3>Container Queries</h3>
+
+              <p>
+                Reusable components that adapt to their container instead of
+                depending only on the viewport.
+              </p>
+
+              <a href="unit-4/advanced/container-demo.html">
+                View project <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="course-work">
+        <div class="home-section-heading">
+          <p class="home-eyebrow">Learning journey</p>
+
+          <h2>Explore the course by unit</h2>
+
+          <p>
+            Each unit focuses on a different part of modern CSS and interface
+            development.
+          </p>
+        </div>
+
+        <div class="unit-grid">
+          <article class="unit-card">
+            <span class="unit-number">01</span>
+            <h3>Foundations</h3>
+
+            <p>Custom properties, reusable design values, and CSS nesting.</p>
+
+            <ul>
+              <li>
+                <a href="unit-1/custom-properties/index.html">
+                  Custom Properties and Nesting
+                </a>
+              </li>
+            </ul>
+          </article>
+
+          <article class="unit-card">
+            <span class="unit-number">02</span>
+            <h3>CSS Architecture</h3>
+
+            <p>Cascade layers, scoped styles, and PostCSS workflows.</p>
+
+            <ul>
+              <li>
+                <a href="unit-2/layered-components/index.html">
+                  Layered Components
+                </a>
+              </li>
+
+              <li>
+                <a href="unit-2/sandbox/index.html"> @scope </a>
+              </li>
+
+              <li>
+                <a href="unit-2/postcss-demo/index.html"> PostCSS </a>
+              </li>
+            </ul>
+          </article>
+
+          <article class="unit-card">
+            <span class="unit-number">03</span>
+            <h3>Visual Design</h3>
+
+            <p>Color, contrast, shadows, depth, and visual effects.</p>
+
+            <ul>
+              <li>
+                <a href="unit-3/index.html"> Contrast Color </a>
+              </li>
+
+              <li>
+                <a href="unit-3/shadows/index.html"> Shadows </a>
+              </li>
+
+              <li>
+                <a href="unit-3/visual-effects/index.html"> Visual Effects </a>
+              </li>
+            </ul>
+          </article>
+
+          <article class="unit-card">
+            <span class="unit-number">04</span>
+            <h3>Advanced Layout</h3>
+
+            <p>Grid areas, subgrid, container queries, and sticky layouts.</p>
+
+            <ul>
+              <li>
+                <a href="unit-4/index.html"> Grid Areas and Lines </a>
+              </li>
+
+              <li>
+                <a href="unit-4/grid-layouts/editorial.html">
+                  Editorial Layout
+                </a>
+              </li>
+
+              <li>
+                <a href="unit-4/grid-layouts/cards.html">
+                  Responsive Card Grid
+                </a>
+              </li>
+
+              <li>
+                <a href="unit-4/display-contents/index.html">
+                  Display Contents
+                </a>
+              </li>
+
+              <li>
+                <a href="unit-4/advanced/container-demo.html">
+                  Container Queries
+                </a>
+              </li>
+
+              <li>
+                <a href="unit-4/advanced/sticky-demo.html"> Sticky Layout </a>
+              </li>
+            </ul>
+          </article>
+
+          <article class="unit-card">
+            <span class="unit-number">05</span>
+            <h3>Typography and UI</h3>
+
+            <p>Variable fonts, themes, résumé, and contact forms.</p>
+
+            <ul>
+              <li>
+                <a href="unit-5/variable-font-axes/index.html">
+                  Variable Font Axes
+                </a>
+              </li>
+
+              <li>
+                <a href="unit-5/color-scheme/index.html"> Color Scheme </a>
+              </li>
+
+              <li>
+                <a href="resume.html"> Résumé </a>
+              </li>
+
+              <li>
+                <a href="contact.html"> Contact Form </a>
+              </li>
+            </ul>
+          </article>
+
+          <article class="unit-card">
+            <span class="unit-number">06</span>
+            <h3>CSS Motion</h3>
+
+            <p>Transitions, motion paths, and scroll-driven animations.</p>
+
+            <ul>
+              <li>
+                <a href="unit-6/motion/index.html"> Motion </a>
+              </li>
+
+              <li>
+                <a href="unit-6/scroll-animation/index.html">
+                  Scroll Animation
+                </a>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="home-section-heading">
+          <p class="home-eyebrow">About me</p>
+
+          <h2>I learn by creating real projects</h2>
+
+          <p>
+            I enjoy learning how design, accessibility, and development work
+            together to create useful experiences.
+          </p>
+        </div>
+
+        <div class="home-about-grid">
+          <div class="home-about-copy">
+            <p>
+              I’m a Computer Science student who enjoys turning ideas into
+              complete web experiences. I work with HTML, CSS, JavaScript,
+              Node.js, Express, PostgreSQL, and React.
+            </p>
+
+            <p>
+              This site began as a course practice project, but it now
+              represents my progress with responsive design, CSS architecture,
+              accessibility, animation, and component-based layouts.
+            </p>
+
+            <p>
+              My goal is to continue building projects that are not only
+              functional, but also clear, responsive, accessible, and enjoyable
+              to use.
+            </p>
+          </div>
+
+          <aside class="home-skills">
+            <h3>Current focus</h3>
+
+            <ul>
+              <li>Responsive Grid and Flexbox</li>
+              <li>Container Queries and Subgrid</li>
+              <li>Design Tokens and Cascade Layers</li>
+              <li>Accessible Interface Design</li>
+              <li>Motion and Scroll Animation</li>
+              <li>Full-stack Web Development</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="home-contact" id="contact">
+        <div>
+          <p class="home-eyebrow">Let’s connect</p>
+
+          <h2>Interested in my work?</h2>
+
+          <p>
+            View my résumé or send me a message to learn more about my
+            experience, skills, and projects.
+          </p>
+        </div>
+
+        <div class="home-actions">
+          <a class="home-button home-button-primary" href="contact.html">
+            Send a message
+          </a>
+
+          <a class="home-button home-button-secondary" href="resume.html">
+            View résumé
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="home-footer">
+      <a class="home-logo" href="index.html" aria-label="Return to homepage">
+        LV<span>.</span>
+      </a>
+
+      <p>&copy; 2026 Laurin Vasquez. Built with modern CSS.</p>
+
+      <a href="#top"> Back to top <span aria-hidden="true">↑</span> </a>
+    </footer>
+
     <script src="js/main.js"></script>
   </body>
-  <footer>
-    <p>&copy; 2026 Laurin Vasquez. All rights reserved.</p>
-  </footer>
 </html>
